@@ -1,0 +1,33 @@
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+        public static void Main()
+        {
+            Program.EvenNumbers(30);
+
+            Program P = new Program(); //add'i jaoks
+            int Sum = P.Add(10, 20);
+
+            Console.WriteLine("Sum = {0}", Sum);
+        }
+
+
+        public int Add(int FN, int SN) //liidab esimese ja teise ja viib väärtuseks
+        {
+            return FN + SN;
+        }
+        public static void EvenNumbers(int Target) 
+        {//prindib kuni 30 paaris arve
+            int Start = 0;
+
+            while(Start <=Target)
+            {
+                Console.WriteLine(Start);
+                Start = Start + 2;
+            }
+        }
+    }
+}
