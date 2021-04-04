@@ -1,0 +1,42 @@
+using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+        public static void Main() ///pass by value ei muuda mälus olevat väärtust kuna suunavad erinavatesse kohtadesse
+
+        {
+            int i = 0; ///i on 0
+            SimpleMethod(i); ///Simple method on 0
+
+            Console.WriteLine(i);
+        }
+
+        public static void SimpleMethod(int j) ///teeb koopia Simple methodist ja muudab j'ks
+        {
+            j = 101;
+        }
+
+
+
+
+
+
+
+        public static void Main() ///pass by reference muudab väärtust kuan suunavad sammasse mälusse
+
+        {
+            int i = 0; 
+            SimpleMethod(ref i); ///i on 0
+
+            Console.WriteLine(i);
+        }
+
+        public static void SimpleMethod(ref int  j) ///j on ka 0
+        {
+            j = 101; ///muudab väärtuse 101'ks
+        }
+    
+    }
+}
