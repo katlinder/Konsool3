@@ -1,0 +1,42 @@
+using System;
+
+namespace ConsoleApp11
+{
+   using System;
+
+namespace ConsoleApp11
+{
+    class Program
+    {
+        static void Main()
+        {
+            string UserChoice = string.Empty; //määrab ära UserChoice
+            do
+            {
+                Console.WriteLine("Please enter your target"); //kasutaja määrab sihtmärgi
+                int UserTarget = int.Parse(Console.ReadLine());
+
+                int Start = 0; //alustab nullist
+
+                while (Start <= UserTarget) //kirjutab kuni jõuab sihtmärgini
+                {
+                    Console.Write(Start + " ");
+                    Start = Start  + 2; //paarisarvud
+                }
+
+
+                do //hoiab luubis kuni kasutaha valib edasise valiku
+                {
+                    Console.WriteLine("Do you want to continue - Yes or No?");
+
+                    UserChoice = Console.ReadLine().ToUpper(); //valik võib olla suurte või väikeste tähtedega
+                    if (UserChoice != "YES" && UserChoice != "NO")
+
+                    {
+                        Console.WriteLine("Invalid Choice, please say yes or no");
+                    }
+                } while (UserChoice != "YES" && UserChoice != "NO");
+            } while (UserChoice == "YES");
+        }
+    }
+}
